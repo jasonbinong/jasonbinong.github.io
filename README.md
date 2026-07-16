@@ -5,8 +5,8 @@ Personal portfolio for Jason Binong, focused on AI, data, information systems, a
 ## Live Projects Featured
 
 - Nexus AI
-- CareerLens AI
-- LearnWise AI
+- CareerLens
+- LearnWise
 - 15 Weeks at UMBC
 
 ## How To Run
