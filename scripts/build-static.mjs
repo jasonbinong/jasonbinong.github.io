@@ -8,9 +8,12 @@ await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 await mkdir(join(dist, "server"), { recursive: true });
 
-for (const entry of ["index.html", "styles.css", "script.js", "assets", ".openai"]) {
+for (const entry of ["index.html", "nexus-case-study.html", "styles.css", "script.js", "assets", ".openai"]) {
   await cp(join(root, entry), join(dist, entry), { recursive: true });
 }
+
+const homeHtml = await readFile(join(root, "index.html"), "utf8");
+const nexusCaseHtml = await readFile(join(root, "nexus-case-study.html"), "utf8");
 
 const assetFiles = await readdir(join(root, "assets"));
 const assets = {};
@@ -23,8 +26,10 @@ for (const file of assetFiles) {
 }
 
 const textRoutes = {
-  "/": { contentType: "text/html; charset=utf-8", body: await readFile(join(root, "index.html"), "utf8") },
-  "/index.html": { contentType: "text/html; charset=utf-8", body: await readFile(join(root, "index.html"), "utf8") },
+  "/": { contentType: "text/html; charset=utf-8", body: homeHtml },
+  "/index.html": { contentType: "text/html; charset=utf-8", body: homeHtml },
+  "/nexus-case-study": { contentType: "text/html; charset=utf-8", body: nexusCaseHtml },
+  "/nexus-case-study.html": { contentType: "text/html; charset=utf-8", body: nexusCaseHtml },
   "/styles.css": { contentType: "text/css; charset=utf-8", body: await readFile(join(root, "styles.css"), "utf8") },
   "/script.js": { contentType: "application/javascript; charset=utf-8", body: await readFile(join(root, "script.js"), "utf8") }
 };

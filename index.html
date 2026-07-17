@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
   <header class="site-header">
@@ -20,6 +20,7 @@
       <a href="#work">Work</a>
       <a href="#case-study">Case Study</a>
       <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="assets/Jason-Binong-Resume.pdf" target="_blank" rel="noopener">Resume</a>
@@ -92,6 +93,12 @@
         <article class="project-card featured">
           <img src="assets/nexus-thumbnail.png?v=10" alt="Nexus AI project thumbnail">
           <div class="project-content">
+            <div class="project-badges" aria-label="Nexus AI project status">
+              <span>Live</span>
+              <span>Backend deployed</span>
+              <span>Case study</span>
+              <span>In progress</span>
+            </div>
             <div class="project-meta">
               <span>Flagship Product</span>
               <span>JavaScript + FastAPI + SQLite</span>
@@ -103,9 +110,14 @@
               <li>Designed resume coaching, career readiness analytics, onboarding, and sample recruiter workspace flows.</li>
               <li>Created a roadmap for authentication, PostgreSQL, and AI-assisted feedback.</li>
             </ul>
+            <div class="project-proof">
+              <strong>Proof of work</strong>
+              <span>CRUD API, readiness scoring, resume notes, project storage, and deployment flow.</span>
+            </div>
             <div class="project-actions">
               <a href="https://jasonbinong.github.io/Nexus-AI/" target="_blank" rel="noopener">Live App</a>
               <a href="https://github.com/jasonbinong/Nexus-AI" target="_blank" rel="noopener">GitHub</a>
+              <a href="nexus-case-study.html">Case Study</a>
             </div>
           </div>
         </article>
@@ -113,6 +125,11 @@
         <article class="project-card">
           <img src="assets/careerlens-thumbnail.png?v=11" alt="CareerLens project thumbnail">
           <div class="project-content">
+            <div class="project-badges" aria-label="CareerLens project status">
+              <span>Live</span>
+              <span>Data workflow</span>
+              <span>GitHub</span>
+            </div>
             <div class="project-meta">
               <span>Labor Market Intelligence</span>
               <span>JS + Python + SQL</span>
@@ -124,6 +141,10 @@
               <li>Added CSV pipeline and SQL schema for scalable market intelligence.</li>
               <li>Generated portfolio evidence checklists and resume bullet ideas.</li>
             </ul>
+            <div class="project-proof">
+              <strong>Proof of work</strong>
+              <span>Role filters, market insights, certification demand, and learning roadmap logic.</span>
+            </div>
             <div class="project-actions">
               <a href="https://jasonbinong.github.io/CareerLens-AI/" target="_blank" rel="noopener">Live App</a>
               <a href="https://github.com/jasonbinong/CareerLens-AI" target="_blank" rel="noopener">GitHub</a>
@@ -134,6 +155,11 @@
         <article class="project-card">
           <img src="assets/learnwise-thumbnail.png?v=11" alt="LearnWise project thumbnail">
           <div class="project-content">
+            <div class="project-badges" aria-label="LearnWise project status">
+              <span>Live</span>
+              <span>Recommendation logic</span>
+              <span>GitHub</span>
+            </div>
             <div class="project-meta">
               <span>Academic Decision Support</span>
               <span>HTML + CSS + JavaScript</span>
@@ -145,6 +171,10 @@
               <li>Designed academic ROI scoring to prioritize high-impact study actions.</li>
               <li>Created a student dashboard with risk, grade impact, and resource rankings.</li>
             </ul>
+            <div class="project-proof">
+              <strong>Proof of work</strong>
+              <span>Course risk scoring, study resource ranking, and personalized action recommendations.</span>
+            </div>
             <div class="project-actions">
               <a href="https://jasonbinong.github.io/LearnWise-AI/" target="_blank" rel="noopener">Live App</a>
               <a href="https://github.com/jasonbinong/LearnWise-AI" target="_blank" rel="noopener">GitHub</a>
@@ -155,6 +185,11 @@
         <article class="project-card">
           <img src="assets/umbc-game-thumbnail-pixel.png?v=1" alt="15 Weeks at UMBC project thumbnail">
           <div class="project-content">
+            <div class="project-badges" aria-label="15 Weeks at UMBC project status">
+              <span>Live</span>
+              <span>Browser game</span>
+              <span>GitHub</span>
+            </div>
             <div class="project-meta">
               <span>Interactive Systems</span>
               <span>Java + Processing + JavaScript</span>
@@ -166,6 +201,10 @@
               <li>Added save/load support, achievements, multiple endings, and profile-specific events.</li>
               <li>Converted the original Processing project into a deployable browser game.</li>
             </ul>
+            <div class="project-proof">
+              <strong>Proof of work</strong>
+              <span>Decision engine, seven tracked stats, save/load, achievements, and multiple endings.</span>
+            </div>
             <div class="project-actions">
               <a href="https://jasonbinong.github.io/15-Weeks-At-UMBC/" target="_blank" rel="noopener">Play Game</a>
               <a href="https://github.com/jasonbinong/15-Weeks-At-UMBC" target="_blank" rel="noopener">GitHub</a>
@@ -196,6 +235,10 @@
             <span>hosted backend</span>
           </div>
         </div>
+        <div class="case-link-row">
+          <a class="button primary" href="nexus-case-study.html">Read Full Case Study</a>
+          <a class="button secondary dark" href="https://github.com/jasonbinong/Nexus-AI" target="_blank" rel="noopener">View Repository</a>
+        </div>
       </div>
       <div class="case-media">
         <img src="assets/nexus-showcase.gif" alt="Animated Nexus AI product showcase">
@@ -208,18 +251,47 @@
         <h2>What I bring into project work.</h2>
         <p>I focus on building tools that explain what matters, store useful data, and guide people toward the next action.</p>
       </div>
-      <div class="skill-board">
+      <div class="skill-board proof-board">
         <div>
-          <h3>AI & Data</h3>
-          <p>Generative AI, prompt engineering, AI model evaluation, data analysis, Power BI, labor market signals.</p>
+          <h3>FastAPI + SQLite</h3>
+          <p><strong>Nexus AI:</strong> built a hosted backend for storing applications, goals, projects, contacts, and resume notes.</p>
         </div>
         <div>
-          <h3>Development</h3>
-          <p>JavaScript, Python, SQL, Java, HTML, CSS, FastAPI, SQLite, GitHub Pages, Render.</p>
+          <h3>Data Analysis</h3>
+          <p><strong>CareerLens:</strong> converted job-posting patterns into role insights, skill demand, and certification recommendations.</p>
         </div>
         <div>
-          <h3>Systems Thinking</h3>
-          <p>Information systems, database planning, workflow design, CRUD patterns, user-centered dashboards.</p>
+          <h3>Recommendation Logic</h3>
+          <p><strong>LearnWise:</strong> ranked study actions by urgency, weak topics, time available, and expected academic impact.</p>
+        </div>
+        <div>
+          <h3>Interactive Systems</h3>
+          <p><strong>15 Weeks at UMBC:</strong> designed a decision engine where each action changes player stats and endings.</p>
+        </div>
+        <div>
+          <h3>Deployment</h3>
+          <p><strong>Portfolio + projects:</strong> shipped browser-ready apps through GitHub Pages and hosted backend services through Render.</p>
+        </div>
+        <div>
+          <h3>Product Thinking</h3>
+          <p><strong>All projects:</strong> framed student problems, built usable workflows, and connected features to resume-ready outcomes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section" id="resume">
+      <div>
+        <p class="eyebrow">Resume</p>
+        <h2>Current resume and profile links.</h2>
+        <p>My resume highlights AI/data training, information systems coursework, full-stack project work, and deployed student-focused products.</p>
+      </div>
+      <div class="resume-card">
+        <strong>Jason Binong Resume</strong>
+        <span>Updated project section with Nexus AI, CareerLens, LearnWise, and 15 Weeks at UMBC.</span>
+        <div class="project-actions">
+          <a href="assets/Jason-Binong-Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+          <a href="https://github.com/jasonbinong" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/jason-binong-59195a391/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
