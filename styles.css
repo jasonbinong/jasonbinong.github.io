@@ -457,23 +457,6 @@ h3 {
   width: 100%;
 }
 
-.case-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.case-preview-grid img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
-  padding: 6px;
-  background: #f7f4ee;
-  border-radius: 12px;
-}
-
 .split {
   display: grid;
   grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
@@ -597,10 +580,6 @@ footer {
     align-items: flex-start;
     margin-left: 16px;
     margin-right: 16px;
-  }
-
-  .case-preview-grid {
-    grid-template-columns: 1fr;
   }
 
   .contact-actions {
