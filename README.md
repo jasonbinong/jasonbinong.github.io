@@ -5,8 +5,8 @@ Personal portfolio for Jason Binong, focused on AI, data, information systems, a
 ## Live Projects Featured
 
 - [Nexus AI](https://jasonbinong.github.io/Nexus-AI/) - career operating system with backend API, readiness scoring, and student career tracking
-- [CareerLens](https://jasonbinong.github.io/CareerLens-AI/) - labor market intelligence dashboard with skill demand, resume gaps, decision briefs, and application packet outputs
-- [LearnWise](https://jasonbinong.github.io/LearnWise-AI/) - academic resource recommendation system for study prioritization
+- [CareerLens](https://jasonbinong.github.io/CareerLens/) - labor market intelligence dashboard with skill demand, resume gaps, decision briefs, and application packet outputs
+- [LearnWise](https://jasonbinong.github.io/LearnWise/) - academic resource recommendation system for study prioritization
 - [15 Weeks at UMBC](https://jasonbinong.github.io/15-Weeks-At-UMBC/) - arcade-style campus-life strategy game with branching choices and semester outcomes
 
 ## Case Studies
