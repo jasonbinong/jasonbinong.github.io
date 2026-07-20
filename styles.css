@@ -362,11 +362,8 @@ h3 {
   height: auto;
   min-height: 0;
   aspect-ratio: 16 / 9;
-  object-fit: contain;
-  padding: clamp(14px, 2vw, 22px);
-  background:
-    linear-gradient(135deg, rgba(21, 32, 38, 0.08), rgba(31, 111, 91, 0.08)),
-    #fbf8f1;
+  object-fit: cover;
+  background: #fbf8f1;
   border-bottom: 1px solid var(--line);
 }
 
@@ -801,10 +798,6 @@ footer {
   .roadmap-section {
     margin-left: 16px;
     margin-right: 16px;
-  }
-
-  .project-card > img {
-    padding: 10px;
   }
 
   h1 {
