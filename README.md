@@ -2,12 +2,25 @@
 
 Personal portfolio for Jason Binong, focused on AI, data, information systems, and student technology projects.
 
+## Quick Links
+
+- [Live Portfolio](https://jasonbinong.github.io/)
+- [Resume](https://jasonbinong.github.io/assets/Jason-Binong-Resume.pdf)
+- [GitHub Profile](https://github.com/jasonbinong)
+- [LinkedIn](https://www.linkedin.com/in/jason-binong-59195a391/)
+
+## Currently Building
+
+Nexus AI is the flagship product. Current priorities include authentication, PostgreSQL migration, AI coaching workflows, and cleaner career-readiness reporting.
+
 ## Live Projects Featured
 
-- [Nexus AI](https://jasonbinong.github.io/Nexus-AI/) - career operating system with backend API, readiness scoring, and student career tracking
-- [CareerLens](https://jasonbinong.github.io/CareerLens/) - labor market intelligence dashboard with skill demand, resume gaps, decision briefs, and application packet outputs
-- [LearnWise](https://jasonbinong.github.io/LearnWise/) - academic resource recommendation system for study prioritization
-- [15 Weeks at UMBC](https://jasonbinong.github.io/15-Weeks-At-UMBC/) - arcade-style campus-life strategy game with branching choices and semester outcomes
+| Project | Live App | Case Study | Tech Stack | Focus |
+| --- | --- | --- | --- | --- |
+| Nexus AI | [Open](https://jasonbinong.github.io/Nexus-AI/) | [Read](https://jasonbinong.github.io/nexus-case-study.html) | JavaScript, Python, FastAPI, SQLite, Render | Career operating system with backend API, readiness scoring, and student career tracking |
+| CareerLens | [Open](https://jasonbinong.github.io/CareerLens/) | [Read](https://jasonbinong.github.io/careerlens-case-study.html) | JavaScript, Python, SQL, CSV Workflow | Labor market dashboard with skill demand, resume gaps, decision briefs, and application packet outputs |
+| LearnWise | [Open](https://jasonbinong.github.io/LearnWise/) | [Read](https://jasonbinong.github.io/learnwise-case-study.html) | JavaScript, HTML/CSS, Recommendation Logic | Academic resource recommendation system for study prioritization |
+| 15 Weeks at UMBC | [Play](https://jasonbinong.github.io/15-Weeks-At-UMBC/) | [Read](https://jasonbinong.github.io/umbc-game-case-study.html) | JavaScript, HTML/CSS, Game State Logic | Arcade-style campus-life strategy game with branching choices and semester outcomes |
 
 ## Case Studies
 
