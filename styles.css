@@ -24,11 +24,7 @@ body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
   color: var(--ink);
-  background:
-    linear-gradient(90deg, rgba(21, 32, 38, 0.045) 1px, transparent 1px),
-    linear-gradient(rgba(21, 32, 38, 0.035) 1px, transparent 1px),
-    var(--paper);
-  background-size: 44px 44px;
+  background: var(--paper);
 }
 
 a {
