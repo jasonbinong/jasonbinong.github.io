@@ -308,19 +308,15 @@ h3 {
 }
 
 .github-icon {
-  border: 2px solid var(--ink);
-  border-radius: 50%;
+  display: none;
 }
 
 .github-icon::after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  bottom: -4px;
-  width: 8px;
-  height: 7px;
-  background: var(--ink);
-  border-radius: 0 0 6px 6px;
+  content: none;
+}
+
+.github-mark {
+  fill: currentColor;
 }
 
 .button:hover {
@@ -542,8 +538,9 @@ h3 {
   width: 100%;
   height: auto;
   min-height: 0;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  padding: 8px;
   background: #f8fbff;
   border-bottom: 1px solid var(--line);
 }
