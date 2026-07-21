@@ -1275,8 +1275,9 @@ footer {
   }
 
   .hero-copy {
-    width: calc(100vw - 32px);
-    max-width: calc(100vw - 32px);
+    width: 100%;
+    max-width: 330px;
+    overflow-wrap: anywhere;
   }
 
   .architecture-section,
@@ -1286,16 +1287,39 @@ footer {
   }
 
   h1 {
-    max-width: calc(100vw - 32px);
+    max-width: 330px;
     font-size: 1.36rem;
     line-height: 1.08;
+    overflow-wrap: anywhere;
   }
 
   .hero-text {
     max-width: 100%;
     font-size: 0.94rem;
     line-height: 1.55;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .section-heading,
+  .project-card,
+  .project-content,
+  .project-content p,
+  .about-section p,
+  .resume-copy p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .section-heading,
+  .project-card {
+    width: 100%;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-grid {
+    justify-items: center;
   }
 
   .signal-grid,
@@ -1312,8 +1336,10 @@ footer {
   }
 
   #work .section-heading p {
+    max-width: 330px;
     margin-top: 10px;
     text-align: left;
+    overflow-wrap: anywhere;
   }
 
   footer {
