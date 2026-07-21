@@ -1,15 +1,16 @@
 :root {
-  --ink: #152026;
-  --muted: #65747c;
-  --paper: #f7f4ee;
-  --panel: #fffaf1;
-  --line: rgba(21, 32, 38, 0.13);
-  --green: #1f6f5b;
-  --teal: #27998c;
-  --clay: #c36b4b;
-  --gold: #e4b64e;
-  --blue: #315f9b;
-  --shadow: 0 22px 70px rgba(24, 34, 40, 0.14);
+  --ink: #111827;
+  --muted: #53627a;
+  --paper: #f7f9fc;
+  --panel: #ffffff;
+  --line: rgba(35, 55, 95, 0.13);
+  --green: #1457f2;
+  --teal: #10a7c9;
+  --clay: #1457f2;
+  --gold: #aeea16;
+  --blue: #1457f2;
+  --shadow: 0 24px 70px rgba(15, 40, 90, 0.13);
+  --soft-blue: #eaf1ff;
 }
 
 * {
@@ -24,7 +25,9 @@ body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
   color: var(--ink);
-  background: var(--paper);
+  background:
+    radial-gradient(circle at 16% 8%, rgba(20, 87, 242, 0.08), transparent 28%),
+    linear-gradient(180deg, #fbfdff 0%, var(--paper) 48%, #ffffff 100%);
 }
 
 a {
@@ -45,8 +48,8 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px clamp(20px, 5vw, 72px);
-  background: rgba(247, 244, 238, 0.9);
+  padding: 16px clamp(20px, 5vw, 72px);
+  background: rgba(255, 255, 255, 0.88);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
 }
@@ -61,20 +64,49 @@ img {
 }
 
 .brand {
-  gap: 10px;
+  gap: 12px;
   font-weight: 800;
   letter-spacing: 0;
 }
 
 .brand-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  color: #fff;
-  background: var(--green);
-  border-radius: 50%;
-  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.14);
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1457f2, #06a8ff);
+  box-shadow: 0 12px 24px rgba(20, 87, 242, 0.18);
+  transform: rotate(45deg);
+}
+
+.brand-mark span {
+  position: absolute;
+  display: block;
+  background: #fff;
+  border-radius: 4px;
+  opacity: 0.96;
+}
+
+.brand-mark span:nth-child(1) {
+  width: 18px;
+  height: 6px;
+  top: 9px;
+  left: 9px;
+}
+
+.brand-mark span:nth-child(2) {
+  width: 6px;
+  height: 18px;
+  top: 9px;
+  left: 9px;
+}
+
+.brand-mark span:nth-child(3) {
+  width: 12px;
+  height: 6px;
+  right: 7px;
+  bottom: 9px;
 }
 
 .nav-links {
@@ -86,7 +118,7 @@ img {
 
 .nav-links a:hover,
 .project-actions a:hover {
-  color: var(--green);
+  color: var(--blue);
 }
 
 .nav-cta,
@@ -99,12 +131,15 @@ img {
 
 .nav-cta {
   padding: 10px 16px;
-  background: var(--ink);
+  background: var(--blue);
   color: #fff;
   font-size: 0.88rem;
+  box-shadow: 0 12px 26px rgba(20, 87, 242, 0.2);
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(340px, 440px);
   gap: clamp(28px, 4vw, 54px);
@@ -113,9 +148,40 @@ img {
   padding: clamp(48px, 7vw, 86px) clamp(20px, 5vw, 72px) 44px;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(20, 87, 242, 0.06) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(20, 87, 242, 0.05) 1px, transparent 1px);
+  background-size: 86px 86px;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 42%, #000 100%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 4%;
+  z-index: -1;
+  width: min(52vw, 760px);
+  height: 72%;
+  background:
+    linear-gradient(135deg, transparent 34%, rgba(20, 87, 242, 0.85) 35%, rgba(20, 87, 242, 0.85) 35.6%, transparent 36%),
+    linear-gradient(45deg, transparent 44%, rgba(174, 234, 22, 0.82) 44.5%, rgba(174, 234, 22, 0.82) 45%, transparent 45.5%),
+    linear-gradient(90deg, rgba(20, 87, 242, 0.28) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(20, 87, 242, 0.18) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 118px 118px, 118px 118px;
+  border: 1px solid rgba(20, 87, 242, 0.1);
+  opacity: 0.52;
+  clip-path: polygon(22% 0, 100% 0, 100% 88%, 12% 88%, 0 42%);
+}
+
 .eyebrow {
   margin: 0 0 14px;
-  color: var(--clay);
+  color: var(--blue);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -135,6 +201,16 @@ h1 {
   font-size: clamp(3rem, 5.1vw, 4.85rem);
   line-height: 0.98;
   letter-spacing: 0;
+}
+
+h1::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  background: var(--gold);
+  border-radius: 50%;
 }
 
 h2 {
@@ -213,24 +289,35 @@ h3 {
 
 .button.primary {
   color: #fff;
-  background: var(--green);
-  box-shadow: 0 14px 28px rgba(31, 111, 91, 0.24);
+  background: var(--blue);
+  box-shadow: 0 14px 28px rgba(20, 87, 242, 0.24);
 }
 
 .button.secondary {
-  background: rgba(255, 250, 241, 0.7);
+  background: rgba(255, 255, 255, 0.76);
 }
 
 .hero-panel {
+  position: relative;
+  overflow: hidden;
   padding: 18px;
-  background: rgba(255, 250, 241, 0.72);
+  background: rgba(255, 255, 255, 0.82);
   border: 1px solid var(--line);
-  border-radius: 28px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  pointer-events: none;
+  border: 1px solid rgba(20, 87, 242, 0.1);
+  border-radius: 16px;
 }
 
 .panel-topline {
@@ -255,13 +342,13 @@ h3 {
   padding: 18px;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 12px;
 }
 
 .signal-grid strong {
   display: block;
   margin-bottom: 8px;
-  color: var(--green);
+  color: var(--blue);
   font-size: 2.3rem;
   line-height: 1;
 }
@@ -321,7 +408,7 @@ h3 {
 
 .section-strip span {
   padding: 10px 14px;
-  background: rgba(255, 250, 241, 0.76);
+  background: rgba(255, 255, 255, 0.78);
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--muted);
@@ -331,8 +418,8 @@ h3 {
 .stack-strip span {
   padding: 10px 12px;
   color: #fff;
-  background: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--blue);
+  border: 1px solid rgba(20, 87, 242, 0.14);
   border-radius: 8px;
   font-size: 0.85rem;
   font-weight: 900;
@@ -363,15 +450,15 @@ h3 {
 
 .about-proof-grid div {
   padding: 18px;
-  background: rgba(255, 250, 241, 0.82);
+  background: rgba(255, 255, 255, 0.86);
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 14px;
 }
 
 .about-proof-grid strong {
   display: block;
   margin-bottom: 8px;
-  color: var(--green);
+  color: var(--blue);
   font-size: 0.82rem;
   text-transform: uppercase;
 }
@@ -389,17 +476,17 @@ h3 {
 
 .project-card {
   overflow: hidden;
-  background: rgba(255, 250, 241, 0.82);
+  background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--line);
-  border-radius: 22px;
-  box-shadow: 0 16px 50px rgba(24, 34, 40, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 16px 50px rgba(15, 40, 90, 0.08);
   opacity: 1;
   transform: translateY(0);
   transition: box-shadow 180ms ease;
 }
 
 .project-card:hover {
-  box-shadow: 0 24px 70px rgba(24, 34, 40, 0.13);
+  box-shadow: 0 24px 70px rgba(20, 87, 242, 0.13);
 }
 
 .project-card.featured {
@@ -414,7 +501,7 @@ h3 {
   min-height: 0;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  background: #fbf8f1;
+  background: #f8fbff;
   border-bottom: 1px solid var(--line);
 }
 
@@ -446,7 +533,7 @@ h3 {
 .project-badges span {
   padding: 6px 9px;
   color: #fff;
-  background: var(--ink);
+  background: var(--blue);
   border-radius: 6px;
   font-size: 0.72rem;
   font-weight: 900;
@@ -454,8 +541,8 @@ h3 {
 
 .project-meta span {
   padding: 7px 10px;
-  color: var(--green);
-  background: rgba(31, 111, 91, 0.1);
+  color: var(--blue);
+  background: rgba(20, 87, 242, 0.09);
   border-radius: 999px;
   font-size: 0.76rem;
   font-weight: 900;
@@ -482,13 +569,13 @@ h3 {
   margin-top: 12px;
   padding: 12px 14px;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.58);
 }
 
 .project-impact strong,
 .project-stack strong {
-  color: var(--green);
+  color: var(--blue);
   font-size: 0.76rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -509,13 +596,13 @@ h3 {
   gap: 6px;
   margin: 0 0 22px;
   padding: 14px;
-  background: rgba(31, 111, 91, 0.08);
-  border: 1px solid rgba(31, 111, 91, 0.18);
-  border-radius: 12px;
+  background: rgba(20, 87, 242, 0.06);
+  border: 1px solid rgba(20, 87, 242, 0.14);
+  border-radius: 10px;
 }
 
 .project-proof strong {
-  color: var(--green);
+  color: var(--blue);
   font-size: 0.82rem;
   text-transform: uppercase;
 }
@@ -542,7 +629,7 @@ h3 {
   gap: 34px;
   align-items: center;
   padding: 78px clamp(20px, 5vw, 72px);
-  background: #18262b;
+  background: #101827;
   color: #fff;
 }
 
@@ -619,12 +706,12 @@ h3 {
 }
 
 .skill-board div {
-  background: rgba(255, 250, 241, 0.82);
+  background: rgba(255, 255, 255, 0.88);
   border-color: var(--line);
 }
 
 .skill-board strong {
-  color: var(--green);
+  color: var(--blue);
 }
 
 .resume-section {
@@ -634,8 +721,8 @@ h3 {
   align-items: center;
   padding: 72px clamp(20px, 5vw, 72px);
   background:
-    linear-gradient(135deg, rgba(255, 250, 241, 0.82), rgba(237, 244, 235, 0.78)),
-    #fbf8f1;
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(233, 241, 255, 0.84)),
+    #f8fbff;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -652,8 +739,8 @@ h3 {
   padding: clamp(22px, 3vw, 32px);
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 20px;
-  box-shadow: 0 18px 50px rgba(24, 34, 40, 0.11);
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(15, 40, 90, 0.1);
 }
 
 .resume-card-top {
@@ -670,7 +757,7 @@ h3 {
   width: 62px;
   height: 62px;
   color: var(--ink);
-  background: #f4f1ea;
+  background: #f4f7ff;
   border: 1px solid var(--line);
   border-radius: 16px;
   font-size: 0.85rem;
@@ -700,9 +787,9 @@ h3 {
 
 .resume-details span {
   padding: 8px 10px;
-  color: var(--green);
-  background: rgba(31, 111, 91, 0.08);
-  border: 1px solid rgba(31, 111, 91, 0.16);
+  color: var(--blue);
+  background: rgba(20, 87, 242, 0.08);
+  border: 1px solid rgba(20, 87, 242, 0.15);
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 900;
@@ -727,8 +814,10 @@ h3 {
   margin: 40px clamp(20px, 5vw, 72px) 72px;
   padding: clamp(28px, 5vw, 52px);
   color: #fff;
-  background: linear-gradient(135deg, var(--green), #17343d 58%, var(--blue));
-  border-radius: 28px;
+  background:
+    linear-gradient(135deg, #1457f2, #0b1b3d 62%, #05a8c9);
+  border-radius: 20px;
+  box-shadow: 0 24px 70px rgba(20, 87, 242, 0.16);
 }
 
 .contact h2 {
@@ -766,8 +855,8 @@ footer {
 .case-hero-media.light {
   padding: 14px;
   background:
-    linear-gradient(135deg, rgba(21, 32, 38, 0.08), rgba(31, 111, 91, 0.08)),
-    #fbf8f1;
+    linear-gradient(135deg, rgba(20, 87, 242, 0.08), rgba(174, 234, 22, 0.08)),
+    #f8fbff;
 }
 
 .case-hero-media img {
@@ -785,10 +874,10 @@ footer {
 .architecture-section,
 .roadmap-section {
   padding: clamp(22px, 3vw, 34px);
-  background: rgba(255, 250, 241, 0.84);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--line);
-  border-radius: 22px;
-  box-shadow: 0 16px 50px rgba(24, 34, 40, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 16px 50px rgba(15, 40, 90, 0.08);
 }
 
 .case-detail-grid article p,
@@ -830,7 +919,7 @@ footer {
 }
 
 .architecture-map strong {
-  color: var(--green);
+  color: var(--blue);
   font-size: 1.1rem;
 }
 
