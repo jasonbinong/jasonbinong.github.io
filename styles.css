@@ -692,7 +692,7 @@ h3 {
   height: auto;
   min-height: 0;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
   padding: 0;
   background: #f8fbff;
   border-bottom: 1px solid var(--line);
