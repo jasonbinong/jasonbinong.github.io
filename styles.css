@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   font-family: "Inter", Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(180deg, #ffffff 0%, #f8fbff 58%, #ffffff 100%);
+  overflow-x: hidden;
 }
 
 a {
@@ -143,7 +145,9 @@ img {
   align-items: center;
   min-height: min(560px, calc(100vh - 75px));
   padding: clamp(44px, 6vw, 72px) clamp(20px, 5vw, 72px) 28px;
-  background: #fff;
+  background:
+    radial-gradient(circle at 88% 32%, rgba(20, 87, 242, 0.06), transparent 26%),
+    linear-gradient(180deg, #fff 0%, #fbfdff 100%);
   border-bottom: 1px solid rgba(35, 55, 95, 0.08);
 }
 
@@ -159,60 +163,112 @@ img {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image:
-    radial-gradient(circle, rgba(174, 234, 22, 0.9) 0 3px, transparent 4px),
-    radial-gradient(circle, rgba(20, 87, 242, 0.42) 0 3px, transparent 4px),
-    radial-gradient(circle, rgba(20, 87, 242, 0.24) 0 3px, transparent 4px),
-    linear-gradient(90deg, rgba(174, 234, 22, 0.78), rgba(174, 234, 22, 0.78)),
-    linear-gradient(90deg, rgba(20, 87, 242, 0.5), rgba(20, 87, 242, 0.5)),
-    linear-gradient(180deg, rgba(20, 87, 242, 0.1), rgba(20, 87, 242, 0.1)),
-    linear-gradient(180deg, rgba(20, 87, 242, 0.08), rgba(20, 87, 242, 0.08));
-  background-position:
-    79% 31%,
-    88% 39%,
-    75% 64%,
-    69% 45%,
-    82% 54%,
-    82% 0,
-    91% 0;
-  background-size:
-    8px 8px,
-    8px 8px,
-    8px 8px,
-    190px 2px,
-    220px 2px,
-    1px 100%,
-    1px 100%;
-  background-repeat: no-repeat;
-  opacity: 0.9;
+  background:
+    linear-gradient(90deg, transparent 0%, transparent 76%, rgba(20, 87, 242, 0.08) 76.05%, transparent 76.1%),
+    linear-gradient(90deg, transparent 0%, transparent 85%, rgba(20, 87, 242, 0.06) 85.05%, transparent 85.1%);
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  top: 30px;
-  right: -36px;
+  right: 0;
+  bottom: 0;
   z-index: 0;
   pointer-events: none;
-  width: min(48vw, 690px);
-  height: 430px;
-  background-image:
-    linear-gradient(30deg, transparent 49.2%, rgba(20, 87, 242, 0.22) 49.7%, rgba(20, 87, 242, 0.22) 50.3%, transparent 50.8%),
-    linear-gradient(150deg, transparent 49.2%, rgba(20, 87, 242, 0.18) 49.7%, rgba(20, 87, 242, 0.18) 50.3%, transparent 50.8%),
-    linear-gradient(30deg, transparent 49.2%, rgba(20, 87, 242, 0.18) 49.7%, rgba(20, 87, 242, 0.18) 50.3%, transparent 50.8%),
-    linear-gradient(150deg, transparent 49.2%, rgba(20, 87, 242, 0.14) 49.7%, rgba(20, 87, 242, 0.14) 50.3%, transparent 50.8%);
-  background-position:
-    4% 8%,
-    19% 8%,
-    35% 38%,
-    51% 38%;
-  background-size:
-    260px 150px,
-    260px 150px,
-    300px 170px,
-    300px 170px;
-  background-repeat: no-repeat;
-  opacity: 0.95;
+  width: min(46vw, 680px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(20, 87, 242, 0.14), transparent);
+}
+
+.hero-art {
+  position: absolute;
+  top: 98px;
+  right: clamp(28px, 6vw, 96px);
+  z-index: 0;
+  width: min(43vw, 620px);
+  height: 360px;
+  pointer-events: none;
+}
+
+.blueprint-card {
+  position: absolute;
+  width: 184px;
+  height: 112px;
+  border: 1px solid rgba(20, 87, 242, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.38);
+  transform: rotate(-30deg) skewX(28deg);
+}
+
+.blueprint-card::before,
+.blueprint-card::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(20, 87, 242, 0.12);
+  border-radius: 6px;
+}
+
+.blueprint-card::after {
+  inset: auto 26px 28px 26px;
+  height: 1px;
+  border: 0;
+  background: rgba(20, 87, 242, 0.16);
+}
+
+.card-one {
+  top: 8px;
+  right: 28px;
+}
+
+.card-two {
+  top: 128px;
+  right: 178px;
+}
+
+.card-three {
+  top: 128px;
+  right: -2px;
+}
+
+.blueprint-line {
+  position: absolute;
+  height: 2px;
+  border-radius: 999px;
+  transform: rotate(-30deg);
+}
+
+.blueprint-line.lime {
+  top: 178px;
+  left: 34px;
+  width: 198px;
+  background: rgba(174, 234, 22, 0.9);
+}
+
+.blueprint-line.blue {
+  top: 230px;
+  right: 98px;
+  width: 248px;
+  background: rgba(20, 87, 242, 0.5);
+}
+
+.blueprint-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.blueprint-node.lime {
+  top: 154px;
+  right: 260px;
+  background: var(--gold);
+}
+
+.blueprint-node.blue {
+  top: 228px;
+  right: 118px;
+  background: rgba(20, 87, 242, 0.44);
 }
 
 .eyebrow {
@@ -1035,6 +1091,12 @@ footer {
     min-height: auto;
   }
 
+  .hero-art {
+    opacity: 0.42;
+    right: -120px;
+    width: 520px;
+  }
+
   .hero-panel {
     align-self: auto;
   }
@@ -1072,6 +1134,23 @@ footer {
 @media (max-width: 640px) {
   .site-header {
     padding: 14px 16px;
+  }
+
+  .hero-art,
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .button {
+    justify-content: center;
+    width: 100%;
   }
 
   .brand span:last-child {
