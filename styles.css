@@ -179,7 +179,8 @@ h1 {
   letter-spacing: 0;
 }
 
-h1::after {
+h1::after,
+h2::after {
   content: "";
   display: inline-block;
   width: 12px;
@@ -194,6 +195,11 @@ h2 {
   font-size: clamp(2rem, 4vw, 4.2rem);
   line-height: 1;
   letter-spacing: 0;
+}
+
+h2::after {
+  width: 10px;
+  height: 10px;
 }
 
 h3 {
