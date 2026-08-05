@@ -457,7 +457,8 @@ h3 {
 }
 
 .github-mark,
-.linkedin-mark {
+.linkedin-mark,
+.email-mark {
   fill: currentColor;
 }
 
